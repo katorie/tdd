@@ -4,8 +4,12 @@ require './lib/dollar'
 class MoneyTest < Minitest::Test
   def test_multiplication
     five = Dollar.new(5)
-    five.times(2)
+    product = five.times(2)
 
-    assert_equal 10, five.amount
+    assert_equal 10, product.amount
+
+    product = five.times(3)
+    p product
+    assert_equal 15, product.amount
   end
 end
