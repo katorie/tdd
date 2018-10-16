@@ -13,4 +13,8 @@ class Dollar
     dollar = object
     amount == dollar.amount
   end
+
+    def ==(x)
+      x.instance_of?(Dollar) and @amount == x.amount
+    end
 end
